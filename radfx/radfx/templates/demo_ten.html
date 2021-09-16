@@ -1,0 +1,38 @@
+{%extends "content.html"%}
+{%load plotly_dash%}
+
+{%block title%}Demo Ten - Multiple Callback Values{%endblock%}
+
+{%block content%}
+<h1>Multiple Callback Values</h1>
+<p>
+  Both standard and extended callbacks can return multiple responses. This example instantiates
+  two example applications that use multiple return values for both types of callback.
+</p>
+<p>
+  Note that the second application will not update if the color choice is set to Green. This is
+  intentional; the callback raises a <b>dash.exceptions.PreventUpdate</b> exception when this
+  color choice is in effect.
+</p>
+<div class="card bg-light border-dark">
+  <div class="card-body">
+    <p><span>{</span>% load plotly_dash %}</p>
+    <p><span>{</span>% plotly_app slug="multiple-callback-values" ratio=0.2 %}</p>
+    <p><span>{</span>% plotly_app slug="multiple-callback-values-expanded" ratio=0.2 %}</p>
+  </div>
+</div>
+<p>
+</p>
+<div class="card border-dark">
+  <div class="card-body">
+    {%plotly_app slug="multiple-callback-values-1" ratio=0.2 %}
+  </div>
+</div>
+<p></p>
+<div class="card border-dark">
+  <div class="card-body">
+    {%plotly_app slug="multiple-callback-values-expanded" ratio=0.2 %}
+  </div>
+</div>
+<p></p>
+{%endblock%}
