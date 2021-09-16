@@ -39,11 +39,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'channels',
     'bootstrap4',
-    'solarcycle',
-    'ionStopping',
-    'geomag',
-    'xs',
-    'bendel',
     'django_plotly_dash.apps.DjangoPlotlyDashConfig',
     'dpd_static_support',
 ]
